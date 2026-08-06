@@ -7,7 +7,8 @@ class Solution {
         while (temp > 0) {
             int re = temp % 10;
             p *= re;
-            if (p % t == 0) {
+            if (p % t == 0
+            ) {
             return n;
         }
             temp /= 10;
