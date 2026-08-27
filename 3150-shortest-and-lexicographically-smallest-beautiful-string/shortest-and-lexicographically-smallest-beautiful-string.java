@@ -4,28 +4,26 @@ class Solution {
         int n = s.length();
 
         for(int i=0;i<n;i++){
-            int curones = 0;
-            StringBuilder cur = new StringBuilder();
-
+            int curones=0;
+            StringBuilder str = new StringBuilder();
             for(int j=i;j<n;j++){
-                cur.append(s.charAt(j));
+                str.append(s.charAt(j));
                 if(s.charAt(j)=='1'){
                     curones++;
                 }
+
                 if(curones>k){
                     break;
                 }
                 if(curones==k){
-                    String str = cur.toString();
-
-                    if(ans.isEmpty()||str.length()<ans.length()||str.length()==ans.length()&&str.compareTo(ans)<0){
-                        ans=str;
+                    String cur = str.toString();
+                    
+                    if(ans.isEmpty()||cur.length()<ans.length()||cur.length()==ans.length()&&cur.compareTo(ans)<0){
+                        ans=cur;
                     }
                 }
             }
-
         }
-
         return ans;
     }
 }
