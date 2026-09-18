@@ -12,7 +12,8 @@ class Solution {
             sum+=arr[j];
 
             while(sum>target){
-                sum-=arr[i++];
+                sum-=arr[i];
+                i++;
             }
 
             dp[j+1]=dp[j];
