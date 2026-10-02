@@ -1,14 +1,14 @@
 class Solution {
     public int smallestIndex(int[] nums) {
-        int min = Integer.MAX_VALUE;
+        int mi = Integer.MAX_VALUE;
 
         for(int i=0;i<nums.length;i++){
             if(i==s(nums[i])){
-                min = Math.min(min,i);
+                mi = Math.min(mi,i);
             }
         }
 
-        return min==Integer.MAX_VALUE?-1:min;
+        return mi==Integer.MAX_VALUE?-1:mi;
     }
 
 
